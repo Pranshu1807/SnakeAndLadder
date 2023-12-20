@@ -8,7 +8,7 @@ public class App {
             int dice = (randomNumber % 6) + 1;
             if (option == 1)
                 position += dice;
-            else
+            if(option==2)
                 position = Math.max(0, position - dice);
         }
         System.out.println("The player reached the 100 mark ");
