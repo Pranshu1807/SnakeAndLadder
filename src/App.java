@@ -3,6 +3,7 @@ public class App {
         int player1 = 0;
         int player2 = 0;
         int chance = 0;
+        int roll = 0;
         while (player1 < 100 && player2 < 100) {
             int randomNumber = (int) (Math.random() * 100);
             int option = randomNumber % 3;
@@ -21,6 +22,9 @@ public class App {
             }
             if (option != 1)
                 chance = 1 - chance;
+            roll++;
+            System.out.println("Position of player 1 after " + roll + " moves is " + player1
+                    + " and position of player 2 is " + player2);
         }
         System.out.println(player1 + " " + player2);
         if (player1 == 100)
